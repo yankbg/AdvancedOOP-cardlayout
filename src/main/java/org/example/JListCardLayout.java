@@ -1,3 +1,4 @@
+package org.example;
 import javax.swing.*;
 import java.awt.*;
 
@@ -12,6 +13,19 @@ public class JListCardLayout extends JFrame {
     JButton btn1 = new JButton("Go to card2");
     JButton btn2 = new JButton("Go to card3");
     JButton btn3 = new JButton("Go to card1");
+    JListCardLayout() {
+        addBtn();
+        mainPanelAdd();
+        background();
+        actionListener();
+
+        //Creation of the Background
+        add(mainPanel);
+        setSize(300, 300);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
     // The creation of the addBtn method
     public void addBtn(){
         card1.add(btn1);
@@ -46,6 +60,5 @@ public class JListCardLayout extends JFrame {
             cardLayout.show(mainPanel, "card1");
         });
     }
-
 
 }
