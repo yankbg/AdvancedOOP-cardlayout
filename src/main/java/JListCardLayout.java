@@ -25,5 +25,27 @@ public class JListCardLayout extends JFrame {
         mainPanel.add(card3, "card3");
     }
 
+    //The creation of the method background
+    public void background(){
+        card1.setBackground(Color.blue);
+        card2.setBackground(Color.red);
+        card3.setBackground(Color.green);
+    }
+    //The creation of the method actionListener
+    public void actionListener(){
+
+        btn1.addActionListener((e) ->{
+            cardLayout.show(mainPanel, "card2");
+        });
+
+        btn2.addActionListener((e) ->{
+            cardLayout.show(mainPanel, "card3");
+        });
+
+        btn3.addActionListener((e) ->{
+            cardLayout.show(mainPanel, "card1");
+        });
+    }
+
 
 }
